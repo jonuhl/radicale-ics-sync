@@ -52,7 +52,9 @@ Each sync job supports these fields:
 | `include_patterns` | | `[]` | Can be strings or arbitrary regex patterns |
 | `exclude_patterns` | | `[]` | Can be strings or arbitrary regex patterns |
 
-> **Note:** The collection must already exist in Radicale before the plugin can sync to it. Create it through the Radicale web interface or your CalDAV client first.
+**Note:** The collection must already exist in Radicale before the plugin can sync to it. Create it through the Radicale web interface or your CalDAV client first.
+
+Changes to `ics_sync.json` take effect after restarting Radicale. `docker compose restart` for Docker, `systemctl restart radicale` for systemd.
 
 ### Filtering
 
@@ -70,6 +72,14 @@ Patterns are matched case-insensitively against the event's `SUMMARY` (title) fi
 - If `exclude_patterns` is set: events matching any pattern are removed
 
 ## Docker setup
+
+Before starting the container for the first time, create the required config files:
+ 
+```bash
+touch config users ics_sync.json
+```
+ 
+Then fill in their contents (see [Configuration](#configuration) above).
 
 Here is a minimal `docker-compose.yml`:
 
