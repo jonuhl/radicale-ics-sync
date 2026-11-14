@@ -1,10 +1,14 @@
 # radicale-ics-sync
 
+[![PyPI](https://img.shields.io/pypi/v/radicale-ics-sync)](https://pypi.org/project/radicale-ics-sync/)
+
 Ever wanted to subscribe to an ICS feed (like a university timetable or a shared calendar) in [Radicale](https://radicale.org), but still be able to edit events locally? That's what this plugin is for.
 
 It syncs external ICS feeds into your Radicale calendars, keeps your local changes intact, and lets you filter out events you don't care about.
 
 ## Installation
+
+The plugin is available on [PyPI](https://pypi.org/project/radicale-ics-sync/):
 
 ```bash
 pip install radicale-ics-sync
