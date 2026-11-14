@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "radicale-ics-sync"
-version = "0.1.0"
+version = "0.1.1"
 description = "Radicale plugin: subscribe to ICS feeds with filtering and local edit support"
 readme = "README.md"
 license = {file = "LICENSE"}
